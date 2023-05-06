@@ -31,6 +31,8 @@ streamlit.header("Fruityvice Fruit Advice!")
 import requests
 fruityvice_response = requests.get("https://fruityvice.com/api/fruit/"+"kiwi")
 ##   streamlit.text(fruityvice_response.json())
+fruit_choice = streamlit.text_input('What fruit would you like information about?','Kiwi')
+streamlit.write('The user entered ', fruit_choice)
 
 # write your own comment -what does the next line do? 
 # take json version of the response and normalise it
